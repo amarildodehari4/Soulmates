@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I Love You</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #e60073;
+      font-size: 3em;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .hearts::before,
+    .hearts::after {
+      content: '❤️';
+      font-size: 1.5em;
+      margin: 0 10px;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      border: 5px solid #e60073;
+      border-radius: 15px;
+      padding: 10px;
+      background-color: white;
+    }
+
+    .image-container::before,
+    .image-container::after {
+      content: '💖';
+      font-size: 2em;
+      position: absolute;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .image-container::before {
+      top: -20px;
+      left: -20px;
+    }
+
+    .image-container::after {
+      bottom: -20px;
+      right: -20px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="hearts">I love you</h1>
+  <div class="image-container">
+    <img src="https://i.ibb.co/6chhFTcf/IMG-7986.jpg" alt="Couple Photo">
+  </div>
+</body>
+</html>
